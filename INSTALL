@@ -1,0 +1,18 @@
+$PROJECT_ROOT refers to the directory in which this file resides.
+
+1. Install the following packages
+        python, postgres, rabbitmq, phantomjs
+        WARNING: RabbitMQ will not be on your path by default with Homebrew.
+                 You must add /usr/local/sbin to your path.
+2. Create an empty database test owned by user test, no password
+        Follow this: http://www.sakana.fr/blog/2007/06/06/postgresql-create-a-user-a-database-and-grant-accesses/comment-page-1/
+3. Install virtualenv by running
+        pip install virtualenv
+4. Create a virtual env called venv in $PROJECT_ROOT
+        virtualenv venv
+5. Activate the virtual env
+        source venv/bin/activate
+6. Install requirements into the virtual env
+        pip install -r requirements.txt
+7. Create the DB schema
+        foreman run python manage.py syncdb

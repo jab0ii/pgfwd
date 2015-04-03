@@ -1,0 +1,24 @@
+<!-- Authors: Feiyang Xue, Jonathan Ma, Eric Jan -->
+<div class="row"  >
+    
+ 
+    <div class="span8 offset2" >
+        <h3 align="center" id="announce">Hi {{ user }}</h3>
+        <h3 align="center" ng-show="hasOrg">Current Association: <b id="userOrgName">{{ orgName }}</b></h3>
+
+<!--
+<div class="container" align="center" id="eventWindow">
+-->
+
+
+            <div class="eventShow text-center" ng-repeat="logEvent in logEvents">
+                <p>Title: {{ logEvent.title }}</p>
+                <p>Date Sent: {{ logEvent.date_sent }}</p>
+                <p>Date Acked: {{ logEvent.date_ack }}</p>
+            </div>
+
+        <!--
+        </div>
+        -->
+    </div>
+</div>

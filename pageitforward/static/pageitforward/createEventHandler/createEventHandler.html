@@ -1,0 +1,63 @@
+<!-- Author: Jaspreet Singh, Eric Jan -->
+<div class="alert alert-danger text-center hide" id="eventHandlerCreateFail" role="alert"
+     xmlns="http://www.w3.org/1999/html">
+    <strong>Error!</strong> Could not create your paging hierarchy at this time. Please try again.
+</div>
+
+<div class="alert alert-success text-center hide" id="eventHandlerCreateSuccess" role="alert">
+    <strong>Success!</strong> Your paging hierarchy can now be used to send a page!
+</div>
+
+<div class  = "panel-body" id = "createCmethodPanel">
+    <div></div>
+  <div class = "row row-space-top-6 row-space-6">
+    <div class="col-7 col-center text-center">
+        <h1 class="h2">
+            New Paging Hierarchy
+        </h1> 
+    </div>
+  </div>
+  </div>
+
+<div id = "crEventH" class="text-center">
+<div id = "eventHbtnGrp" class="btn-group" role="group" aria-label="...">
+
+<button id="addUser" type="button" class="btn btn-default" ng-click="addUserOption()">
+    Add User
+</button>
+
+<button id="addLevel" type="button" class="btn btn-default" ng-click="addEventHandlerLevel()">
+    Add Level
+</button>
+</div> <!--eo btngrouo-->
+
+<button id="createHierarchy" type="button" class="btn btn-default" ng-click="postEventHandler()">
+    Create
+</button>
+
+<br><br>
+
+
+<div id="CreateEventForm">
+  <div  id="EventHandlerTitle">
+      <label> Paging Hierarchy Title: </label>
+      <input id="titleIn" type="text">
+  </div>
+
+  <div class="timerValue" id="timerVal">
+      <label>Timer Value: </label>
+      <input class="timerinp" id="timeForAck" type="text">
+      <button ng-click="removeHierarchyElement($event)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+  </div>
+
+  <div class="userSelect" id="userSel">
+    <label>Select User: </label>
+    <select class = "userinp" id="userSelector">
+        <option ng-repeat="user in users" value="{{ user.id }}">
+            {{ user.firstName }} {{ user.lastName }}
+        </option>
+    </select>
+    <button ng-click="removeHierarchyElement($event)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+  </div>
+</div>
+</div>

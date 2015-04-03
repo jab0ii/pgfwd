@@ -1,0 +1,537 @@
+/* Authors: Jaspreet Singh, Feiyang Xue, Jonathan Ma. Eric Jan*/
+@import url("//fonts.googleapis.com/css?family=Ubuntu|Cabin:400,700");
+
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+
+#forForms {
+    width:100%;
+    margin-left:0px;
+}
+
+
+body.bs1 { padding-top: 0px;
+   /* background:url("../images/bridge.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    /*background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position:center; */
+    background-color: white;
+    position: relative;
+    }
+body.bs2 {
+     padding-top: 0px;
+    /*background:url("../images/bridge.jpg");*/
+    background-color:white;
+    background-repeat: no-repeat;
+    }
+}
+
+.shit{
+    color: #FFF;
+    background-color: #21CE99 !important;
+    border-color: #21CE99 !important;
+    margin-top: 40px;
+}
+.phl {
+    padding-bottom: 9px;
+    margin: 40px 0px 20px;
+    border-bottom: hidden;
+}
+.carousel-caption {
+	font-size: 24px;
+}
+
+.carousel-caption h4 {
+	font-size: 52px;
+        margin-bottom: 20px
+}
+
+/*#landing {
+    width:90%;
+}*/
+
+#landCarousel {
+    min-width: 1280px;
+}
+
+/**#landingCarousel .item {
+    text-align: center;
+    height: 400px !important;
+    width: 100%;
+    } **/
+/**
+#slide1 {
+		background: url('../images/manhattan-bridge-sky.jpg') top center no-repeat;
+	}
+	
+#slide2 {
+		background: url('../images/manhattan-bridge-sky.jpg') top center no-repeat;
+	}
+	**/
+/*---------------*/
+/*------welll-----*/
+.well .page-header {
+	margin-top: 0;
+}
+
+.well .page-header h1 {
+	margin-top: 0;
+}
+/*------------*/
+
+#loginHeader {
+    padding-right: 0px;
+}
+
+#navTitle, #myModalLabel{
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    line-height: 1.5;
+    color: #21CE99;/*#FF8533;/*#FF6633;*/
+    display: inline;
+}
+
+#myModalLabel {
+    font-size: 30px;
+}
+
+#navTitleLink{
+    text-decoration: none;
+}
+
+#navLoginSubmit {
+    color: #FFF;
+    background-color: #21CE99 !important; /*#3071A9;
+	    
+    border: transparent;*/
+    border-color: #21CE99;
+}
+nav.navbarr1 {
+    background: rgba(232,232,232, 0.3);
+   /* background: rgba(96,96,96, 0.0
+  );*/}
+
+nav.navbarr2 {
+/*background-color: #2C2C2C;
+background-image: -moz-linear-gradient(center top , #333, #222);
+background-repeat: repeat-x;
+border-radius: 0px;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25), 0px -1px 0px rgba(0, 0, 0, 0.1) inset;   
+    /*background: rgba(232,232,232, 0.0*/
+    /*background: rgba(96,96,96, 0.5
+  );*/
+        background: white;
+
+    }
+
+.navbar-default.navb {
+    border-color: transparent;
+}
+
+
+
+.navbar-default.navb .navbar-nav > li > a:hover, .navbar-default.navb .navbar-nav > li > a:focus {
+    color: #21CE99 !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+}
+
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+
+.nav.nav-center {
+    margin:0;
+    float:none;
+}
+
+.navbar-inner{
+    text-align:center;
+}
+
+.navbar-inner-left{
+    text-align:left;
+}
+
+.navbar-inner-right{
+    text-align:right;
+}
+
+.cssText {
+    color: green;
+}
+
+
+
+/*#signUpBox{
+    width: 250px;
+    margin:100px auto;
+}*/
+
+.submitDiv{
+    text-align: center;
+}
+
+#orgName{
+    color:#ffffff;
+}
+
+#eventWindow {
+    max-height: 500px;
+    min-height: 300px;
+    width: 1000px;
+    background-color: #F0F0F0 ;
+    border: 2px solid black;
+    overflow-y:scroll;
+}
+
+.eventShow{
+    border:2px solid #696969;
+    height: 120px;
+    margin: 0 -15px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+/*.inputBox{
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+}*/
+
+.modal-footer {
+    background-color: rgba(232,232,232, 0.7
+  );
+}
+.inputBox input{
+  display: block;
+  margin: 0;
+  width: 70%;
+  font-family: sans-serif;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+.inputBox input:focus {
+  outline: none;
+}
+
+.inputBox input {
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+.inputBox input:focus,
+.inputBox input.focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+.well {
+    margin: 20px 0;
+    background: rgba(232,232,232, 0.5);
+
+}
+
+/*navbar dropdown*/
+ul.unstyled {
+	list-style: none;
+	padding: 0;
+}
+
+
+#callout{
+    text-align: center;
+    background-color: transparent; /*#F6F6F6;*/
+    padding-bottom: 2.1875rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+
+
+}
+
+#landh {
+    /*padding-top: 1.5em;*/
+padding-bottom: 1em;
+margin: 0px;
+font-size: 50px;
+color: white;
+font-family: "helvetica neue",Helvetica,Arial;
+font-weight: 300;
+
+}
+
+#landp {
+    padding-top: 1.5em;
+padding-bottom: 1em;
+margin: 0px;
+font-size: 30px;
+color: black;
+font-family: "helvetica neue",Helvetica,Arial;
+font-weight: 300;
+width: 68%;
+text-align: left;
+}
+
+#landingText {
+padding-top: 100px;
+width: 70%;
+color: #2C3E50;
+text-align: left;
+margin-top:-5%;
+}
+
+#lImg {
+    width:248px;
+    height: 252px;
+    background-image: url("fastexecutions.jpg");
+    background-size: cover;
+     -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin-top:-20%;
+  margin-left: auto;
+  margin-right:6%;
+
+}
+
+#ViewPort {
+    background-color:white ;
+    background: rgba(0, 0, 0, 0.0
+  );
+    width: 100%;
+}
+
+/* footer */
+.pageFooter {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-top: 50px;
+        text-align: center;
+        border-top: 0px;
+}
+
+ #footerAbout a{
+    color: #21CE99;
+    padding-top: 30px;
+}
+
+
+
+/*end footer */
+
+/*body panels */
+
+.panel-body:first-child {
+    border-top: 0px none;
+}
+
+
+.panel-body {
+    margin: 0px;
+    padding: 20px;
+}
+
+.panel {
+    background: #F5F5F5;
+}
+.row-space-top-6 {
+    margin-top: 37.5px;
+}
+.row-space-6 {
+    margin-bottom: 37.5px;
+     margin-left: -12.5px;
+    margin-right: -12.5px;
+    /*box-sizing: border-box;*/
+}
+
+.row > .col-7 {
+    padding-left: 12.5px;
+    padding-right: 12.5px;
+}
+
+.col-7 {
+    width: 58.3333%;
+   /* position: relative;*/
+    min-height: 1px;
+}
+
+.col-center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1, .h2 {
+    font-weight: normal;
+    line-height: 1.1;
+    text-rendering: optimizelegibility;
+}
+
+h1:first-child {
+    margin-top: 0px;
+}
+
+.h2 {
+    font-size: 32px;
+}
+
+h1 {
+    margin-bottom: 15px;
+    margin: 0.67em 0px;
+}
+
+/*--- end of Body Panels --*/
+
+/* add contactmethod page style --*/
+#contactType {
+    margin-left: 16px;
+}
+
+#createContactMethodForm .form-control {
+    width: 600px;
+    float: none;
+    margin-bottom: 10px;
+}
+
+
+#submitBtnCreate {
+    margin-left: 24%;
+
+}
+
+#createCmethodPanel {
+    background-color: #F6F6F6;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: -20px;
+
+
+}
+
+/*createEvent*/
+#eventTitle, #eventMessage {
+    width: 400px;
+}
+
+#eventMessage {
+    height:200px;
+}
+
+#createEventForm .form-control {
+     width: 600px;
+    float: none;
+    margin-bottom: 10px;
+}
+
+#eventButton {
+    margin-left: 36.8%;
+}
+/*end createEvent */
+
+/*create eventhandlers */
+
+#addUser, #addLevel {
+    background-color:#0066FF;
+    border:1px solid #0066CC;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:arial;
+    font-size:17px;
+    
+}
+
+#cbtn1, #cbtn2 {
+    color: #FFF;
+background-color: #21CE99 !important;;
+border-color: #1DB889 !important;;
+
+    font-family:arial;
+
+
+}
+#createHierarchy {
+    background-color:#44c767;
+    border:1px solid #18ab29;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:arial;
+    font-size:17px;
+    margin-left: 5%
+
+ }
+
+#crEventH {
+    margin-left: 100px;
+    
+}
+
+.timerValue {
+	margin-left:48px;
+}
+
+.userSelect {
+	margin-left:50px;
+}
+
+#titleIn {width:250px;}
+.timerinp{width:250px;
+}
+
+#eventHbtnGrp {
+    margin-left:4%;
+}
+/*end creae evenhandlers */
+
+/*--end contactmethod page style 
+#inputOrgName {
+    width: 600px;
+    float: none;
+    margin-bottom: 10px;
+
+}*/
+
+#submitAssociate, #submitBtnCreate, #eventButton {
+    	background-color:#44c767;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:17px;
+	padding:12px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+
+#submitAssociate, #submitBtnCreate, #eventButton :hover {
+	background-color:#5cbf2a;
+}
+
+#submitAssociate, #submitBtnCreate, #eventButton :active {
+	position:relative;
+	top:1px;
+}
+
+

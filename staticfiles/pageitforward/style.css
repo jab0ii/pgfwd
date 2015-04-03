@@ -1,0 +1,178 @@
+/* Authors: Jaspreet Singh, Feiyang Xue, Jonathan Ma. Eric Jan*/
+@import url("//fonts.googleapis.com/css?family=Ubuntu|Cabin:400,700");
+
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+
+
+body { padding-top: 70px;
+    background-image: url("colorful-triangles-background.jpg");
+    background-repeat: no-repeat;
+    background-position:center; 
+    }
+
+#scroll {
+    overflow: scroll;
+    }
+
+
+.carousel-caption {
+	font-size: 24px;
+}
+
+.carousel-caption h4 {
+	font-size: 52px;
+        margin-bottom: 20px
+}
+
+#landing {
+    width:95%;
+}
+
+#landCarousel {
+    width: 100%;
+}
+
+#landingCarousel .item {
+    text-align: center;
+    height: 400px !important;
+    } 
+
+#slide1 {
+		background: url('manhattan-bridge-sky.jpg') top center no-repeat;
+	}
+	
+#slide2 {
+		background: url('manhattan-bridge-sky.jpg') top center no-repeat;
+	}
+	
+/*---------------*/
+/*------welll-----*/
+.well .page-header {
+	margin-top: 0;
+}
+
+.well .page-header h1 {
+	margin-top: 0;
+}
+/*------------*/
+
+#loginHeader {
+    padding-right: 100px;
+}
+
+#navTitle{
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    line-height: 1.5;
+    color: #FF6633;
+    display: inline;
+}
+
+#navTitleLink{
+    text-decoration: none;
+}
+
+#navbarr {
+    background-color: #E8E8E8;
+background: rgba(232,232,232, 0.8
+  );}
+
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+
+.nav.nav-center {
+    margin:0;
+    float:none;
+}
+
+.navbar-inner{
+    text-align:center;
+}
+
+.navbar-inner-left{
+    text-align:left;
+}
+
+.navbar-inner-right{
+    text-align:right;
+}
+
+.cssText {
+    color: green;
+}
+
+
+
+#signUpBox{
+    width: 250px;
+    margin:100px auto;
+    background: rgba(232,232,232, 0.8);
+}
+
+.submitDiv{
+    text-align: center;
+}
+
+#orgName{
+    color:#ffffff;
+}
+
+#eventWindow {
+    max-height: 500px;
+    min-height: 300px;
+    width: 1000px;
+    background-color: #F0F0F0 ;
+    border: 2px solid black;
+    overflow-y:scroll;
+}
+
+.eventShow{
+    border:2px solid #696969;
+    height: 120px;
+    margin: 0px -15px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+.inputBox{
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.well {
+    margin: 20px 0;
+    background: rgba(232,232,232, 0.5);
+
+}
+
+
+#callout{
+    width: auto;
+}
+#ViewPort {
+    background-color:white ;
+    background: rgba(0, 0, 0, 0.0
+  );
+}
+
+.pageFooter {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-top: 50px;
+        background-color: #E8E8E8;
+        text-align: center;
+background: rgba(232,232,232, 0.8
+  );
+}

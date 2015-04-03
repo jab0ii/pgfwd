@@ -1,0 +1,47 @@
+Running the App
+
+    1. Ensure Postgres and RabbitMQ are running (commands for Mac)
+            pg_ctl start -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log
+            rabbitmq-server
+    2. Start foreman
+            foreman start
+
+Running Tests
+
+    1. Ensure Postgres and RabbitMQ are running
+    2. Run the tests (functional and unit)
+            scripts/runTests.sh
+
+Running Tests (only some)
+
+    1. To only run some tests, provide an option
+            Allowed options are unit, func, or ui
+    2. Example with options
+            scripts/runTests.sh unit
+
+Clearing the message queue
+    1. Some tests leave stale messages in RabbitMQ. To clear them, run
+            scripts/runTests.sh reset
+
+Generating the Code Coverage Report
+
+    1. Ensure Postgres and RabbitMQ are running
+    2. Run the code coverage tool
+            scripts/genCodeCvgRpt.sh
+    4. Output will be in ./codeCoverage
+
+Generating the Author Report
+    
+    1. Run the script
+            scripts/genAuthorRpt.sh '2014-08-01' '2014-12-31'
+    2. Note that the two arguments indicate the date range for the report.
+    3. Output will be in ./authorRpt.html
+
+Common Tasks
+    If requirements.txt changed, be sure to run
+            pip install -r requirements.txt
+
+Known Issues
+    1. The functional test harness does NOT work (zmq/assertResponses)
+       if Celery is running with CELERY_ALWAYS_EAGER set. Use a mock
+       to monitor which pages are sent instead.

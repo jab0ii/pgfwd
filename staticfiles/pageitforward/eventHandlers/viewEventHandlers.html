@@ -1,0 +1,17 @@
+<div class="alert alert-danger text-center hide" id="eventHandlerDeleteFail" role="alert">
+    <strong>Error!</strong> Could not delete your Event Handler at this time, please try again.
+</div>
+
+<div class="alert alert-success text-center hide" id="eventHandlerDeleteSuccess" role="alert">
+    <strong>Success!</strong> Your Event Handler was successfully deleted.
+</div>
+
+<h1 ng-show="eventHandlers.length > 0">Event Handlers</h1>
+
+<ul ng-repeat="eventHandler in eventHandlers">
+    <div id="eventHandler{{ eventHandler.eventHandlerID }}">
+        <li><a>{{ eventHandler.title }}</a></li>
+        <button ng-click="deleteEventHandler(eventHandler.eventHandlerID)"><span class="glyphicon glyphicon-trash" aria-hidden="Delete"></span></button>
+        <button ng-click="editEventHandler(eventHandler)"><span class="glyphicon glyphicon-cog" aria-hidden="Edit"></span></button>
+    </div>
+</ul>

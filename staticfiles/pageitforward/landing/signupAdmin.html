@@ -1,0 +1,44 @@
+ <div id="signUpBox">
+        <h1>Sign Up</h1>
+                <div class="alert alert-danger text-center hide" id="signupAlert" role="alert">
+                     <strong>Email already in use!</strong> Please pick a different email or log in .
+                </div>
+               <form name="myForm" class="simple-form">
+                   <label for="email">Email</label><br/>
+                   <input class="inputBox" type="email" id="email" name="email" ng-model="formData.email" required/>
+                   <span ng-show="myForm.email.$error.required && myForm.email.$dirty">Required!</span>
+                   <span ng-show="!myForm.email.$error.required && myForm.email.$error.email && myForm.email.$dirty">Please provide a valid email.</span>
+                       <br />
+
+                   <label for="firstName">First Name</label> <br/>
+                   <input class="inputBox" type="text" id="name" name="name" ng-model="formData.firstName" required/>
+                   <span ng-show="myForm.name.$error.required && myForm.name.$dirty">required</span>
+                       <br />
+
+                   <label for="username">Last Name</label> <br/>
+                   <input class="inputBox" type="text" id="username" name="username" ng-model="formData.lastName"  required  />
+                   <span ng-show="myForm.username.$error.required && myForm.username.$dirty">required</span>
+                   <br />
+
+
+                   <label for="password">Password</label> <br/>
+                   <input class="inputBox" type="password" id="password" name="password" ng-model="formData.password" required  />
+                   <span ng-show="myForm.password.$error.required && myForm.password.$dirty">required</span>
+                   <br />
+
+
+                   <label for="password_c">Confirm Password</label>
+                   <input class="inputBox" type="password" id="password_c" name="password_c" ng-model="formData.password_c" valid-password-c required  />
+                   <span ng-show="myForm.password_c.$error.required && myForm.password_c.$dirty">Please confirm your password.</span>
+                   <span ng-show="!myForm.password_c.$error.required && myForm.password_c.$error.noMatch && myForm.password.$dirty">Passwords do not match.</span>
+                   <br />
+
+                    <br/>
+                    
+                     <br/>
+                     <input id="inputOrgName" type="text" class="form-control" placeholder="Organization Name" ng-model="org.orgName">
+                     <br/>
+
+                    <button type="submit" style="width:175px" id = "regUserSubmit" class="btn btn-default btn-group-lg text-center" ng-disabled="!myForm.$valid" ng-click="registerAdminSubmit(formData, org)">Submit</button>
+               </form>
+            </div>

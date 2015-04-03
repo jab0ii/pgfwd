@@ -1,0 +1,206 @@
+{#Author: Jaspreet Singh, Feiyang Xue, Jonathan Ma, Eric Jan #}
+<!DOCTYPE html>
+
+<html lang="en" ng-app="PageItForwardApp" ng-controller="LandingCtlr">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {#    viewport meta tag is used by bootstrap, see http://getbootstrap.com/css/ for more info#}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {#    loads our css/javascript/html snippets #}
+    {% load staticfiles %}
+    {#    currently we are using one singular css file, we may want to use a hierarchy of css files in the future #}
+    <link rel="stylesheet" type="text/css" href="{% static 'pageitforward/css/animate.css' %}" />
+    <link href="{% static 'pageitforward/css/bootstrap-glyphicons.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'pageitforward/css/style.css' %}" />
+    
+    {#    the following scripts load up necessary front end libraries#}
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript">
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js" type="text/javascript">
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.js" type="text/javascript">
+    </script>
+    
+    {#    load storage #}
+    <script src="{% static 'components/bower_components/ngstorage/ngStorage.min.js' %}">
+    </script>
+    <script src="{% static 'pageitforward/js/app.js' %}" type="text/javascript">
+    </script>
+    <script src="{% static 'pageitforward/js/wow.min.js' %}" type="text/javascript">
+    </script>
+    <script>
+      new WOW().init();
+    </script>
+    
+    {% load djangular_tags %}
+    <title>
+      PageItForward
+    </title>
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    
+    {# Load the tag library #}
+    {% load bootstrap3 %}
+    
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    
+    {# Display django.contrib.messages as Bootstrap alerts #}
+    {% bootstrap_messages %}
+    
+    
+  </head>
+  
+  <body ng-class="{true:'bs1', false:'bs2'}[!bActive]" ng-init = "changeClassLI()" >
+    
+    {#TODO: prettify header (specifically, title, also place everything on the same baseline #}
+    {#BEGIN Header code#}
+    <nav class="navbar navbar-default navb navbar-static-top" role="navigation" ng-class="{true:'navbarr1', false:'navbarr2'}[!bActive]" ng-style = "navbar" >
+      <div class="container">
+        <div class="navbar-inner">
+          
+          <div class="navbar-left">
+            <a id="navTitleLink" href="/" ng-click="logoL()">
+              <h1 id="navTitle">
+                PageItForward
+              </h1>
+            </a>
+          </div>
+          
+          {#          see https://docs.angularjs.org/guide/forms for an explanation of Angular forms, (essential reading)#}
+          {#          for example, you should know what 'novalidate' in the tag does #}
+          {#          in this we're using 'user' object to pass the user input, as specified by ng-model #}
+          <form class="navbar-form navbar-right simple-form" id="loginHeader" novalidate ng-hide="loggedIn">
+            <span class="form-group">
+              <input id="navLoginEmail" type="text" class="form-control" placeholder="Email" ng-model="user.username">
+              <input id="navLoginPassword" type="password" class="form-control" placeholder="Password" ng-model="user.password">
+            </span>
+            {#                on click, invoke the 'submit' function defined in app.js with the user object that we populated with user input#}
+            <button id="navLoginSubmit" type="submit" class="btn btn-default" ng-click="login(user)">
+              Login
+            </button>
+          </form>
+          
+          <ul class="nav navbar-nav pull-right" ng-hide="!loggedIn">
+            <li class="dropdown" id="mainDrop">
+              <a class="dropdown-toggle" data-toggle="dropdown" id ="dropData">
+                <span class="glyphicon glyphicon-user" >
+                </span>
+                My Account 
+                <strong class="caret">
+                </strong>
+              </a>
+              
+              
+              <ul class="dropdown-menu" >
+                <li>
+                  <a id="settings" ng-click = "settings(); changeClassLI2() " ng-hide="!loggedIn" >
+                    Contact Methods 
+                  </a>
+                </li>
+                <li class="divider">
+                </li>
+                <li>
+                  <a id="navLogout" ng-click = "logout(); changeClassLI()"ng-hide="!loggedIn">
+                    <span class="glyphicon glyphicon-off">
+                    </span>
+                    Logout 
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav pull-right" ng-hide="!loggedIn">
+            
+            
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" id="eventDrop" >
+                <span class="glyphicon glyphicon-plus">
+                </span>
+                Paging 
+                <strong class="caret">
+                </strong>
+              </a>
+              
+              <ul class="dropdown-menu">
+                <li>
+                  <a id="gotoEvent" ng-click = "createEvent()" ng-hide="!loggedIn">
+                    New Page
+                  </a>
+                </li>
+                
+                <li>
+                  <a id="CreateEventHandler" ng-hide="!loggedIn" ng-click="changeView('/eventHandlers'); changeClassLI2()">
+                    Paging Hierarchies
+                  </a>
+                </li>
+                
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav pull-right" ng-hide="!loggedIn">
+            <li class="dropdown">
+              <a ng-click = "profile(); changeClassLI2()" ng-hide="!loggedIn">
+                <span class="glyphicon glyphicon-dashboard" >
+                </span>
+                Dashboard 
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {#END#}
+    
+    <div class="alert alert-danger text-center hide" id="loginAlert" role="alert">
+      <strong>
+        Invalid username or password!
+      </strong>
+      Please try logging in again.
+    </div>
+    
+    {#BEGIN true Body code#}
+    {# div tag allows us to replace #}
+    {% angularjs ng %}
+    <div id="ViewPort" ng-view>
+      {% endangularjs %}
+      {#END#}
+    </div>
+    
+    {#BEGIN footer code#}
+    
+    <footer class="pageFooter" >
+      <div class="footer text-center">
+        <div id="footerAbout">
+          <a href="" >
+            Contact
+          </a>
+          |
+          <a href="" >
+            Jobs
+          </a>
+          |
+          <a href="">
+            Investors
+          </a>
+          |
+          <a href="">
+            About
+          </a>
+        </div>
+      </div>
+    </footer>
+    
+    {#END#}
+    
+    
+  </body>
+</html>

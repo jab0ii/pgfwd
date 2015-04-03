@@ -1,0 +1,40 @@
+<!-- Author: Jaspreet Singh, Eric Jan -->
+
+  <div class="container">
+<div class  = "panel-body">
+    <div></div>
+  <div class = "row row-space-top-6 row-space-6">
+    <div class="col-7 col-center text-center">
+        <h1 = class= "h2">
+          Associate Your Account
+        </h1>
+        <p class = "text-lead">
+          Associate or Create a New Organization
+        </p>
+    </div>
+  </div>
+  </div>
+<div class="container" id="forForms2">
+
+<div class="panel panel-default">
+  <div class="panel-body">
+  <form class="simple-form" id = "associateOrg">
+
+    <span class="form-group">
+
+        <h1>Your Organization</h1>
+            <div class="alert alert-danger text-center hide" id="orgAlert" role="alert">
+                 <strong>Organization Name must be only one word and cannot be empty!</strong> Please try again.
+            </div>
+            <div class="alert alert-danger text-center hide" id="associateFail" role="alert">
+                <strong>Error!</strong> That organization does not exist, please try again!
+            </div>
+       <input type="text" id="inputOrgName" class="form-control" placeholder="Organization Name" ng-model="org.orgName">
+    </span>
+    <button type="submit" id="submitAssociate" class="btn btn-default" ng-click="associateUser(org)">Associate</button>
+   </form>
+  </div>
+</div>
+  <!--medium-->
+  </div>
+  </div>

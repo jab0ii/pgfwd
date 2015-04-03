@@ -1,0 +1,47 @@
+<!-- Author: Jaspreet Singh -->
+<div class="alert alert-danger text-center hide" id="editEventHandlerCreateFail" role="alert">
+    <strong>Error!</strong> Could not update your paging hierarchy at this time. Please try again.
+</div>
+
+<div class="alert alert-success text-center hide" id="editEventHandlerCreateSuccess" role="alert">
+    <strong>Success!</strong> Your paging hierarchy has been updated!
+</div>
+
+<div class="text-center">
+    <h1> Update Paging Hiearchy </h1>
+</div>
+
+<button id="addUser" type="button" class="btn btn-default" ng-click="addUserOption()">
+    Add User
+</button>
+
+<button type="button" class="btn btn-default" ng-click="addEventHandlerLevel()">
+    Add Level
+</button>
+
+<button id="createHierarchy" type="button" class="btn btn-default" ng-click="postEditEventHandler(editEventHandlerID)">
+    Update Hierarchy
+</button>
+
+<br><br>
+
+<div id="CreateEventForm">
+  <div id="EventHandlerTitle">
+      <label>Paging Hierarchy Title: </label>
+      <textarea id="eventHandlerTitle">{{ editEventHandlerTitle }}</textarea>
+  </div>
+
+    <div class="timerValue">
+      <label>Timer Value: </label>
+      <input id="timeForAck" type="text">
+  </div>
+
+  <div class="userSelect">
+    <label>Select User: </label>
+    <select id="userSelector">
+        <option ng-repeat="user in users" value="{{ user.id }}">
+            {{ user.firstName }} {{ user.lastName }}
+        </option>
+    </select>
+  </div>
+</div>

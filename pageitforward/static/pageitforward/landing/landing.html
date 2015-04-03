@@ -1,0 +1,141 @@
+<!-- Authors: Jonathan Ma, Feiyang Xue, Jaspreet Singh, Eric Jan -->
+   <div class="container" id="landing">
+  <!-- <div id="landingCarousel" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators 
+			  <ol class="carousel-indicators">
+			    <li data-target="#landingCarousel" data-slide-to="0" class="active"></li>
+			    <li data-target="#landingCarousel" data-slide-to="1"></li>
+			  </ol>
+			    <div class="carousel-inner">
+					<div class="item active" id="slide1">
+						<div class="carousel-caption">
+							<h4>PageItFoward</h4>
+							<p>Automated On-Call Paging System</p>
+						</div>
+					</div>
+					
+					<div class="item" id="slide2">
+						<div class="carousel-caption">
+							<h4>Minimize Downtime</h4>
+							<p>Seamless Alert Messaging</p>
+						</div>
+					</div>
+					
+					
+				</div>
+
+
+			 <a class="left carousel-control" role="button" data-slide="prev" ng-click="scrollLeft()">
+			    <span class="glyphicon glyphicon-chevron-left"></span>
+			  </a>
+			  <a class="right carousel-control" role="button" data-slide="next" ng-click="scrollRight()">
+			    <span class="glyphicon glyphicon-chevron-right"></span>
+			  </a> 
+</div> 
+-->
+
+	
+			<section class="row" id="callout">
+				<div class="col-12">
+					<!--	<div class="phl" class="page-header text-center">
+							<h1 id = landh> Seamless Alert Messaging Integration
+</h1>
+						</div>
+						
+						
+						-->
+						<h1 id= "landingText">Easy alert integration.</h1>
+						<p id = landp class="lead">
+We provide the API you need to integrate alerts into your monitoring system. We ensure the right people are notified.
+						</p>
+						<div id="lImg">
+						  
+						</div>
+
+				<!--<div class="text-center"><button id="signUp"  ng-click = "signupAdmin()"
+						ng-hide="loggedIn" class="btn btn-lg btn-primary text-center" id="alertMe">Sign Up Admin</button></div>
+					
+				</div>
+				<div class="text-center"><button id="signUp"  ng-click = "signUp()"
+						ng-hide="loggedIn" class="btn btn-lg btn-primary text-center" id="alertMe">Sign Up User</button></div>
+					
+   </div>-->
+			
+			<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" ng-hide="loggedIn" id="alertMe">
+  Sign Up
+</button>
+
+<!-- Modal -->
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">PageItFoward</h4>
+      </div>
+      <div class="modal-body">
+	<!--	  <button type="button" class="btn btn-primary btn pull-right" data-dismiss="modal" data-toggle="modal"  data-target="#myModal2" ng-hide="loggedIn" id="alertMe">
+Join Existing Team</button>
+</br>-->
+</br>
+         <div id="signUpBox">
+                <div class="alert alert-danger text-center hide"  id="signupAlert" role="alert">
+                     <strong>Email already in use!</strong> Please pick a different email or log in .
+                </div>
+               <form name="myForm" class="simple-form">
+                   <input class = "form-control" class="inputBox" placeholder="Email" type="email" id="email" name="email" ng-model="formData.email" required/>
+                   <span ng-show="myForm.email.$error.required && myForm.email.$dirty">Required!</span>
+                   <span ng-show="!myForm.email.$error.required && myForm.email.$error.email && myForm.email.$dirty">Please provide a valid email.</span>
+                       <br />
+
+                   <input class = "form-control" class="inputBox" placeholder="First name" type="text" id="name" name="name" ng-model="formData.firstName" required/>
+                   <span ng-show="myForm.name.$error.required && myForm.name.$dirty">Required!</span>
+                       <br />
+
+                   <input class = "form-control" class="inputBox" placeholder="Last name" type="text" id="username" name="username" ng-model="formData.lastName"  required  />
+                   <span ng-show="myForm.username.$error.required && myForm.username.$dirty">Required!</span>
+                   <br />
+
+
+                   <input class = "form-control" class="inputBox" placeholder="Password" type="password" id="password" name="password" ng-model="formData.password" required  />
+                   <span ng-show="myForm.password.$error.required && myForm.password.$dirty">Required!</span>
+                   <br />
+
+
+                   <input class = "form-control" class="inputBox" placeholder="Confirm password" type="password" id="password_c" name="password_c" ng-model="formData.password_c" valid-password-c required  />
+                   <span ng-show="myForm.password_c.$error.required && myForm.password_c.$dirty">Please confirm your password.</span>
+                   <span ng-show="!myForm.password_c.$error.required && myForm.password_c.$error.noMatch && myForm.password.$dirty">Passwords do not match.</span>
+                   <br />
+		   <div class="btn-group" role="group" aria-label="...">
+		    <button id = "cbtn1" type="button" class="btn btn-default" btn-radio="'left'" ng-click="companyAdmin()">Register New Organization</button>
+		    <button id = "cbtn2" type="button" class="btn btn-default" btn-radio="'right'" ng-click="companyUser()">Join Existing Organization</button>
+		      </div>
+		      <br />
+		      <br/>
+                    
+		      <input class = "form-control"  ng-hide = "!cUser"class ="inputBox" id="inputOrgName" type="text" placeholder="Existing organization name" ng-model="org.orgName">
+
+                     <input class = "form-control"  ng-hide = "!cAdmin" class ="inputBox" id="inputOrgName" type="text" placeholder="New organization name" ng-model="org.orgName">
+                     <br/>
+		     
+
+               </form>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	<button type="submit" style="width:175px" id="regUserSubmit" class="btn btn-default btn-group-lg text-center" ng-disabled="!myForm.$valid" ng-click="subForm(formData, org)">Submit</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+			</section>
+
+
+       <!--    -->
+</div>

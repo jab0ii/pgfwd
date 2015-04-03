@@ -1,0 +1,41 @@
+<div class  = "panel-body" id = "createCmethodPanel">
+  <div>
+  </div>
+  <div class = "row row-space-top-2 row-space-2">
+		<div class="col-md-4"></div>
+		<div class="col-md-3">
+ 
+<h1>Paging Hierarchies</h1>
+
+   
+  </div> 
+<div class="col-md-5"></div>
+  </div>
+</div>
+
+
+
+<div class="alert alert-danger text-center hide" id="eventHandlerDeleteFail" role="alert">
+    <strong>Error!</strong> Could not delete your paging hierarchy at this time. Please try again.
+</div>
+
+<div class="alert alert-success text-center hide" id="eventHandlerDeleteSuccess" role="alert">
+    <strong>Success!</strong> Your paging hierarchy was successfully deleted.
+</div>
+
+<div class="text-center">
+<h1 ng-show="eventHandlers.length == 0">You have no paging hierarchies currently.</h1>
+</div>
+<ul ng-repeat="eventHandler in eventHandlers">
+   <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-3">
+    <div id="eventHandler{{ eventHandler.eventHandlerID }}">
+        {{ eventHandler.title }}
+        <button ng-click="deleteEventHandler(eventHandler.eventHandlerID)"><span class="glyphicon glyphicon-trash" aria-hidden="Delete"></span></button>
+    </div>
+</div>
+    <div class="col-md-5"></div>
+  </div>
+</ul>
+

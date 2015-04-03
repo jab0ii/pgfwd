@@ -1,0 +1,36 @@
+<!-- Author: Jaspreet Singh, Eric Jan -->
+
+ <div class="container">
+<div class  = "panel-body">
+    <div></div>
+  <div class = "row row-space-top-6 row-space-6">
+    <div class="col-7 col-center text-center">
+        <h1 = class= "h2">
+          Register Your Organization
+        </h1>
+        <p class = "text-lead">
+          Start Linking Your Team Today
+        </p>
+    </div>
+  </div>
+  </div>
+<div class="container" id="forForms2">
+
+<div class="panel panel-default">
+  <div class="panel-body">
+  <form class="simple-form" id = "createOrg">
+    <span class="form-group">
+
+        <h1>Register Your Organization</h1>
+            <div class="alert alert-danger text-center hide" id="orgAlert" role="alert">
+                 <strong>Organization Name must be only one word and cannot be empty!</strong> Please try again.
+            </div>
+       <input id="inputOrgName" type="text" class="form-control" placeholder="Organization Name" ng-model="org.orgName">
+    </span>
+    <button id="submitAssociate" type="submit" class="btn btn-default" ng-click="createOrg(org)">Create</button>
+   </form>
+  </div>
+</div>
+  <!--medium-->
+</div>
+ </div>
